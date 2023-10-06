@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_margin="5dp"
+    android:layout_gravity="center"
+    android:background="@drawable/white_card_background"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:layout_margin="5dp"
+        android:paddingTop="30dp"
+        android:id="@+id/textView2"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_note"
+        android:textColor="@color/black"
+        android:paddingBottom="20dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:paddingStart="2dp"
+        android:id="@+id/edittext"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#d8d6d3"
+        android:gravity="start|top"
+        android:hint="@string/comment_here"
+        android:lines="6"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        tools:ignore="Autofill,RtlSymmetry,TextFields" />
+</LinearLayout>

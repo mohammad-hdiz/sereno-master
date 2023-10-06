@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://repo1.maven.org/maven2' }
+        maven { url 'https://jitpack.io' }
+
+    }
+}
+rootProject.name = "DataCollection"
+include ':app'
+include ':flir-androidsdk-release-1.0.5'
+include ':flir-thermalsdk-release-1.0.5'

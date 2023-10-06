@@ -1,0 +1,108 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.hdiz.datacollection"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.8"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+
+        //noinspection DataBindingWithoutKapt
+        dataBinding true
+        // for view binding:
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(path: ':flir-androidsdk-release-1.0.5')
+    implementation project(path: ':flir-thermalsdk-release-1.0.5')
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+
+    def kotlin_version = '1.6.21'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    //View model
+    def lifecycle_version = '2.2.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // CameraX
+
+   // def camerax_version = '1.0.0-rc01'
+    def camerax_version = "1.1.0-beta02"
+    implementation("androidx.camera:camera-core:${camerax_version}")
+    implementation("androidx.camera:camera-camera2:${camerax_version}")
+    implementation("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation("androidx.camera:camera-view:${camerax_version}")
+    implementation("androidx.camera:camera-extensions:${camerax_version}")
+
+    implementation 'androidx.camera:camera-view:1.0.0-alpha20'
+
+    implementation "com.google.mlkit:barcode-scanning:17.0.2"
+
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.4.0'
+
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.github.qandeelabbassi:Dropsy:1.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation "androidx.work:work-runtime-ktx:2.8.1"
+
+
+    //Rx Java
+    implementation "io.reactivex.rxjava3:rxjava:3.1.5"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    implementation group: 'com.jakewharton.rxbinding2', name: 'rxbinding', version: '2.0.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+        <TableLayout
+                android:id="@+id/table_layout_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/semi_transparent_black"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.65">
+
+            <TableRow>
+
+                <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/flirone"
+                        android:textColor="@color/white" />
+
+                <TextView
+                        android:text="@string/full_column"
+                        android:textColor="@color/white" />
+
+                <TextView
+                        android:id="@+id/text_view_device_status"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/connected"
+                        android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/permission"
+                        android:textColor="@color/white" />
+
+                <TextView
+                        android:text="@string/full_column"
+                        android:textColor="@color/white" />
+
+                <TextView
+                        android:id="@+id/text_view_device_permission"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/denied"
+                        android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/frame_rate"
+                        android:textColor="@color/white" />
+
+                <TextView
+                        android:text="@string/full_column"
+                        android:textColor="@color/white" />
+
+                <TextView
+                        android:id="@+id/text_view_fps"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/none"
+                        android:textColor="@color/white" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/error"
+                        android:textColor="@color/white" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:layout_span="3"
+                        android:id="@+id/errorLogs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_errors"
+                        android:textColor="@color/red"
+                        android:textSize="12sp" />
+            </TableRow>
+
+        </TableLayout>
+        <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imageViewTakeShot"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_camera_24"
+                android:tint="@color/semi_transparent_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewRefresh"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_refresh_24"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewTakeShot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/imageViewTakeShot"
+                app:layout_constraintTop_toTopOf="@+id/imageViewTakeShot" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/previewForVisibleFlir"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent=".2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent=".25" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextViewBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thermalCameraImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewTakeShot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

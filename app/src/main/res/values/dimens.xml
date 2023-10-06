@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="app_bar_height">240dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="screen_margin">16dp</dimen>
+    <dimen name="drop_down_elevation">0dp</dimen>
+</resources>
